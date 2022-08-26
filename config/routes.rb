@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   root 'pages#home'
   get "thankyou/email", to: "pages#thanksemail"
   get "thankyou/order", to: "pages#thanksorder"
+  resources :contacts, only: [:new, :create]
 end
