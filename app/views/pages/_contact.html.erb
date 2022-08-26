@@ -1,6 +1,6 @@
-<%= form_for @contact do |f| %>
+  <%= form_for @contact do |f| %>
     <% if flash[:error].present? %>
-        <p> flash[:error]</p>
+        <p><%= flash[:error] %></p>
     <% end %>
     <%= f.label :name %> <br>
     <%= f.text_field :name, required: true %>
@@ -18,5 +18,5 @@
     <%= f.text_field :nickname, hint: 'leave this field blank' %>
 
 
-    <%= f.submit 'Send Message', class: "button" %>
+    <%= f.submit 'Send Message', class: "btn btn-light" %>
   <% end %>

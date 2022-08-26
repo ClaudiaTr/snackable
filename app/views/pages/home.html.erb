@@ -1,16 +1,44 @@
-<h1>Conversion Actions</h1>
-<h3>Kontaktformular</h3>
-  <%# <%= render "form-contact", contact: @contact %> %>
-  <a href="/thankyou/email">Kontaktformular absenden</a>
-<h3>Buchung</h3>
-  <ul>
-    <li>Artikel 1, 20 Euro</li>
-    <li>Artikel 2, 50 Euro</li>
-    <li>Artikel 3, 30 Euro</li>
-  </ul>
-<h4>Warenkorb</h4>
-  <a href="/thankyou/order">Bestellen</a>
-<h3>Kontakt (Email)</h3>
-  <a href="mailto:ctroeger@google.com">Email senden</a>
-<h3>Klick auf externen Link</h3>
-  <a href="https://support.google.com/google-ads/?hl=de#topic=10286612" target="_blank">Andere Webseite</a>
+<h1 class="m">Conversion Actions</h1>
+<div class="m-5">
+  <h3>Kontaktformular</h3>
+    <%= render "contact" %>
+    <br><br><br>
+    <form action="/thankyou/email" method="get">
+      <input
+        type="text"
+        name="name"
+        value="<%= params[:name] %>"
+        placeholder="Your Name">
+      <input
+        type="text"
+        name="email"
+        value="<%= params[:email] %>"
+        placeholder="Your Email">
+      <input
+        type="text"
+        name="message"
+        value="<%= params[:message] %>"
+        placeholder="Your Message">
+      <input class="btn btn-light" type="submit">
+    </form>
+    <br>
+    <a class="btn btn-light" href="/thankyou/email">Kontaktformular absenden</a>
+</div>
+<div class="m-5">
+  <h3>Buchung</h3>
+    <ul>
+      <li>Artikel 1, 20 Euro</li>
+      <li>Artikel 2, 50 Euro</li>
+      <li>Artikel 3, 30 Euro</li>
+    </ul>
+  <h5>Warenkorb</h5>
+  <a class="btn btn-light" href="/thankyou/order">Bestellen</a>
+</div>
+<div class="m-5">
+  <h3>Kontakt (Email)</h3>
+  <a class="btn btn-light" href="mailto:ctroeger@google.com">Email senden</a>
+</div>
+<div class="m-5">
+  <h3>Klick auf externen Link</h3>
+  <a class="btn btn-light" href="https://support.google.com/google-ads/?hl=de#topic=10286612" target="_blank">Andere Webseite</a>
+</div>

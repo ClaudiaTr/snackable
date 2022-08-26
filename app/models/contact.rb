@@ -1,5 +1,5 @@
-class Contact < MailForm::Base
-# class Contact < ActiveRecord::Base
+# class Contact < MailForm::Base
+class Contact < ActiveRecord::Base
 
   # include MailForm::Delivery
 
