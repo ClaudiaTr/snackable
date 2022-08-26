@@ -1,6 +1,7 @@
 class PagesController < ApplicationController
   def home
     @contact = Contact.new
+    @articles = Article.all
   end
 
   # def create

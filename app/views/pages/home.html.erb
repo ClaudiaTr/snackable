@@ -27,9 +27,12 @@
 <div class="m-5">
   <h3>Buchung</h3>
     <ul>
-      <li>Artikel 1, 20 Euro</li>
+      <%# <li>Artikel 1, 20 Euro</li>
       <li>Artikel 2, 50 Euro</li>
-      <li>Artikel 3, 30 Euro</li>
+      <li>Artikel 3, 30 Euro</li> %>
+    <% @articles.each do |article|%>
+      <li><%= article.name %>, <%= article.price %> CHF <%= link_to "Kaufen", root_path, class: "btn btn-light" %></li>
+      <% end %>
     </ul>
   <h5>Warenkorb</h5>
   <a class="btn btn-light" href="/thankyou/order">Bestellen</a>
