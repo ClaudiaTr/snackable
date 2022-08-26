@@ -1,16 +1,16 @@
 <h1>Conversion Actions</h1>
-<h2>Warenkorb</h2>
 <h3>Kontaktformular</h3>
   <%# <%= render "form", page: @page %>
+  <a href="/thankyou/email">Kontaktformular absenden</a>
 <h3>Buchung</h3>
   <ul>
     <li>Artikel 1, 20 Euro</li>
     <li>Artikel 2, 50 Euro</li>
     <li>Artikel 3, 30 Euro</li>
   </ul>
+<h4>Warenkorb</h4>
+      <a href="/thankyou/order">Bestellen</a>
 <h3>Kontakt (Email)</h3>
-  <%# <% email = "ctroeger@google.com" %>
-  <%# <%= mail_to email, "Email senden" %>
-  <a href="mailto:ctroeger@google.com" class="btn">Email senden</a>
+  <a href="mailto:ctroeger@google.com">Email senden</a>
 <h3>Klick auf externen Link</h3>
   <a href="https://support.google.com/google-ads/?hl=de#topic=10286612" target="_blank">Andere Webseite</a>
